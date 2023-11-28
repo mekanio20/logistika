@@ -1,0 +1,19 @@
+{
+  "name": "ulag-logistika",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app",
+    "dev": "nodemon app"
+  },
+  "author": "Mekan",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "pg": "^8.10.0",
+    "sequelize": "^6.31.1"
+  }
+}

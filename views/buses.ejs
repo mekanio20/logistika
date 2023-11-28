@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/awto.css">
+    <title>Awtobus gatnawlary</title>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <div class="main">
+            <nav class="navbar">
+                <div class="navbar__logo">
+                    <div class="logo">Turkmenistanyn ulag logistika merkezi</div>
+                </div>
+                <ul class="navnar__list">
+                    <li class="navbar__item">
+                        <a href="/" class="navbar__link">Baş sahypa</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="/aeroplane" class="navbar__link">Howa gatnawlary</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="/train" class="navbar__link">Demirýol gatnawlary</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="/buses" class="navbar__link">Awtobus gatnawlary</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="/about" class="navbar__link">Biz barada</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="/contact" class="navbar__link">Habarlaşmak</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="main__image">
+                <img src="/img/buses.jpg">
+            </div>
+            <div id="modalElem" class="modal">
+                <form class="modal__form animate" action="/buses" method="post">
+                    <div class="modal__content">
+
+                        <label for="number">Uçar belgisi</label>
+                        <input class="modal__input" type="text" name="number" required>
+
+                        <label for="path">Nirden - Nirä</label>
+                        <input class="modal__input" type="text" name="path" required>
+
+                        <label for="time">Aralyk</label>
+                        <input class="modal__input" type="text" name="b_time" required>
+
+                        <label for="space">Dowamlylygy</label>
+                        <input class="modal__input" type="text" name="e_time" required>
+
+                        <label>Hepdäniň günleri</label>
+                        <div class="modal__input">
+                            <div class="days">
+                                <label>Du</label>
+                                <input class="chek" type="checkbox" name="ds">
+                                <label>Si</label>
+                                <input class="chek" type="checkbox" name="sh">
+                                <label>Ça</label>
+                                <input class="chek" type="checkbox" name="cr">
+                                <label>Pe</label>
+                                <input class="chek" type="checkbox" name="pn">
+                                <label>An</label>
+                                <input class="chek" type="checkbox" name="an">
+                                <label>Şe</label>
+                                <input class="chek" type="checkbox" name="ss">
+                                <label>Ýe</label>
+                                <input class="chek" type="checkbox" name="yk">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal__content" style="background-color:#f1f1f1">
+                        <button class="modal__button cancelbtn" type="button"
+                            onclick="document.getElementById('modalElem').style.display='none'">Çykmak</button>
+                        <button class="modal__button submitbtn" type="submit">Goşmak</button>
+                    </div>
+                </form>
+            </div>
+            <div class="container">
+                <table class="main__table">
+                    <thead>
+                        <tr>
+                            <th>Uçar belgisi</th>
+                            <th>Nireden - Nirä</th>
+                            <th>Aralyk</th>
+                            <th>Dowamlylygy</th>
+                            <th>Du</th>
+                            <th>Si</th>
+                            <th>Ça</th>
+                            <th>Pe</th>
+                            <th>An</th>
+                            <th>Şe</th>
+                            <th>Ýe</th>
+                            <th>Pozmak</th>
+                        </tr>
+                    </thead>
+                    <tbody class="table__body">
+                        <% buses.forEach(item=> { %>
+                            <tr>
+                                <td><%= item.number %></td>
+                                <td><%= item.path %></td>
+                                <td><%= item.distance %></td>
+                                <td><%= item.continuity %></td>
+                                <td>
+                                    <p class="<%= item.ds %>"></p>
+                                </td>
+                                <td>
+                                    <p class="<%= item.sh %>"></p>
+                                </td>
+                                <td>
+                                    <p class="<%= item.cr %>"></p>
+                                </td>
+                                <td>
+                                    <p class="<%= item.pn %>"></p>
+                                </td>
+                                <td>
+                                    <p class="<%= item.an %>"></p>
+                                </td>
+                                <td>
+                                    <p class="<%= item.ss %>"></p>
+                                </td>
+                                <td>
+                                    <p class="<%= item.yk %>"></p>
+                                </td>
+                                <td>
+                                    <a href="/delete/buses/<%= item.id %>" class="delete">poz</a>
+                                </td>
+                            </tr>
+                        <% }) %>
+                    </tbody>
+                </table>
+                <button class="btn__add" onclick="document.getElementById('modalElem').style.display='block'">
+                    <span class="plus">+</span>
+                    Goşmak
+                </button>
+            </div>
+        </div>
+    </div>
+    <script defer src="/js/script.js"></script>
+</body>
+
+</html>

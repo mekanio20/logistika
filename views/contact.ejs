@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/awto.css">
+    <link rel="stylesheet" href="/css/contact.css">
+    <title>Habarlaşmak</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <nav class="navbar">
+            <div class="navbar__logo">
+                <div class="logo">Turkmenistanyn ulag logistika merkezi</div>
+            </div>
+            <ul class="navnar__list">
+                <li class="navbar__item">
+                    <a href="/" class="navbar__link">Baş sahypa</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="/aeroplane" class="navbar__link">Howa gatnawlary</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="/train" class="navbar__link">Demirýol gatnawlary</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="/buses" class="navbar__link">Awtobus gatnawlary</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="/about" class="navbar__link">Biz barada</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="/contact" class="navbar__link">Habarlaşmak</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="main">
+            <div class="header">
+                <h1 class="header__title">
+                    Habarlaşmak
+                </h1>
+            </div>
+            <div class="main__contact">
+                <form class="contact__form" action="/" method="post">
+                    <input class="contact__name" type="text" name="" placeholder="Adyňyz">
+                    <div class="contact__adress">
+                        <input class="contact__phone"  type="text" name="" placeholder="Telefon belgiňiz">
+                        <input class="contact__email"  type="email" name="" placeholder="E-poçta salgyňyz">
+                    </div>
+                    <input class="contact__theme" type="text" name="" placeholder="Hatyň temasy">
+                    <textarea class="contact__message" name="" cols="30" rows="10" placeholder="Hat"></textarea>
+                    <button class="contact__button" id="btn" type="button">Ugrat</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script defer src="/js/script.js"></script>
+    <script>
+        document.getElementById('btn').addEventListener('click', () => {
+            alert('Habar ugradyldy!')
+            location.reload()
+        })
+    </script>
+</body>
+
+</html>

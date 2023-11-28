@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+a {
+    color: #fff;
+}
+
+.wrapper {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+}
+
+.container {
+    width: 1100px;
+}
+
+.__title {
+    color: #0d0d76;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 10px 20px;
+    font-family: "Raleway", sans-serif;
+}
+
+/* About */
+
+.main__about {
+    width: 70%;
+    margin: 100px auto;
+}
+
+.accordion {
+    background-color: #0d0d76;
+    color: #fff;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+
+.active,
+.accordion:hover {
+    background-color: #1616b4;
+}
+
+.panel {
+    padding: 20px;
+    display: block;
+    overflow: hidden;
+    background-color: white;
+}
